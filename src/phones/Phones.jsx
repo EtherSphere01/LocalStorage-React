@@ -30,6 +30,8 @@ const Phones = ({ phones_data }) => {
   const handleCancel = (phone) => {
     const newCart = cart.filter((item) => item.id !== phone.id);
     setCart(newCart);
+
+    // Remove from local storage
     removeData(phone.id);
   };
 

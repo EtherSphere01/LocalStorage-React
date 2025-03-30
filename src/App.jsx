@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import "./App.css";
 import Phones from "./phones/Phones";
+import Loading from "./Loading";
 
 function App() {
   const fetch_phones = async () => {
@@ -16,7 +17,7 @@ function App() {
     <>
       <h1>Welcome To The Cart</h1>
       <h2>Shopping Cart</h2>
-      <Suspense fallback={<h2>Loading...</h2>}>
+      <Suspense fallback={<Loading></Loading>}>
         <Phones phones_data={phones_data}></Phones>
       </Suspense>
     </>

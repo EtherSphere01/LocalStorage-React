@@ -4,3 +4,6 @@
   padding: 2rem;
 }
 
+.loading-container {
+  background-blend-mode: multiply;
+}
