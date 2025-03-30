@@ -10,6 +10,11 @@ const Phones = ({ phones_data }) => {
     setCart(newCart);
   };
 
+  const handleCancel = (phone) => {
+    const newCart = cart.filter((item) => item.id !== phone.id);
+    setCart(newCart);
+  };
+
   const phones = use(phones_data);
   return (
     <div>
@@ -17,7 +22,11 @@ const Phones = ({ phones_data }) => {
 
       <div className="image-container">
         {cart.map((phone) => (
-          <Carts key={phone.id} phone={phone}></Carts>
+          <Carts
+            key={phone.id}
+            phone={phone}
+            handleCancel={handleCancel}
+          ></Carts>
         ))}
       </div>
 

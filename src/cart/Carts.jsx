@@ -1,11 +1,17 @@
 import React from "react";
 import "./carts.css";
 
-const Carts = ({ phone }) => {
+const Carts = ({ phone, handleCancel }) => {
   return (
     <div className="cart-image-container">
       <img src={phone.image} alt="" className="image" />
-      <button>Cancel</button>
+      <button
+        onClick={() => {
+          handleCancel(phone);
+        }}
+      >
+        Cancel
+      </button>
     </div>
   );
 };
