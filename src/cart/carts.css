@@ -1,0 +1,13 @@
+image {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.cart-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}

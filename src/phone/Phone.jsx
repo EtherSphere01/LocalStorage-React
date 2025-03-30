@@ -1,7 +1,7 @@
 import React from "react";
 import "./phone.css";
 
-const Phone = ({ phone }) => {
+const Phone = ({ phone, handleCart }) => {
   const { name, model, release_date, image } = phone;
   return (
     <div className="phone">
@@ -9,7 +9,14 @@ const Phone = ({ phone }) => {
       <h3>Phone Name: {name} </h3>
       <p>Model: {model} </p>
       <p>Release Date: {release_date} </p>
-      <button> Buy now</button>
+      <button
+        onClick={() => {
+          handleCart(phone);
+        }}
+      >
+        {" "}
+        Buy now
+      </button>
     </div>
   );
 };
